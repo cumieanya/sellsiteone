@@ -39,147 +39,79 @@
                 radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.4) 0%, transparent 10%),
                 radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.3) 0%, transparent 15%);
             background-attachment: fixed;
-            margin: 0;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
-            color: var(--dark-shell);
+            margin: 0; padding: 10px;
+            display: flex; justify-content: center;
+            min-height: 100vh; color: var(--dark-shell);
             overflow-x: hidden;
         }
 
         .container {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(15px);
-            padding: 2rem;
-            border-radius: 50px;
+            padding: 2rem; border-radius: 50px;
             box-shadow: 0px 15px 35px rgba(45, 84, 94, 0.15), inset 0 0 20px rgba(255,255,255,0.5);
-            width: 100%;
-            max-width: 480px;
+            width: 100%; max-width: 480px;
             border: 4px solid rgba(255, 255, 255, 0.8);
-            margin: 20px auto;
-            display: none;
+            margin: 20px auto; display: none;
             animation: float 5s ease-in-out infinite;
-            position: relative;
-            z-index: 1;
+            position: relative; z-index: 1;
         }
 
         .active { display: block; }
 
         h1 {
-            font-family: 'Cinzel', serif;
-            text-align: center;
-            color: var(--deep-sea);
-            font-size: 3.2rem;
-            margin: 15px 0;
-            font-weight: 700;
-            text-shadow: 2px 2px 0px var(--white), 4px 4px 10px rgba(0,0,0,0.1);
+            font-family: 'Cinzel', serif; text-align: center;
+            color: var(--deep-sea); font-size: 3.2rem; margin: 15px 0;
+            font-weight: 700; text-shadow: 2px 2px 0px var(--white), 4px 4px 10px rgba(0,0,0,0.1);
             letter-spacing: 2px;
         }
 
         h2 { text-align: center; font-size: 1.8rem; color: var(--mermaid-pink); margin-bottom: 20px; font-family: 'Cinzel', serif; }
 
         input, select, textarea {
-            width: 100%;
-            padding: 14px;
-            margin: 8px 0;
-            border: 2px solid var(--sea-foam);
-            border-radius: 20px;
-            background: rgba(255,255,255,0.9);
-            font-weight: 600;
-            font-family: inherit;
-            color: var(--dark-shell);
+            width: 100%; padding: 14px; margin: 8px 0;
+            border: 2px solid var(--sea-foam); border-radius: 20px;
+            background: rgba(255,255,255,0.9); font-weight: 600; font-family: inherit;
         }
 
         .btn-main {
-            background: var(--iridescent);
-            color: var(--white);
-            border: 3px solid var(--white);
-            padding: 18px;
-            border-radius: 40px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            cursor: pointer;
-            width: 100%;
-            margin-bottom: 15px;
-            box-shadow: 0px 6px 15px rgba(168, 230, 207, 0.4);
-            transition: 0.3s;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            background: var(--iridescent); color: var(--white);
+            border: 3px solid var(--white); padding: 18px; border-radius: 40px;
+            font-weight: 700; font-size: 1.1rem; cursor: pointer; width: 100%;
+            margin-bottom: 15px; box-shadow: 0px 6px 15px rgba(168, 230, 207, 0.4);
+            transition: 0.3s; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
         .btn-main:hover { filter: brightness(1.05); transform: translateY(-2px); }
-        .btn-main:active { transform: translateY(2px); }
-
         .btn-secondary { background: var(--ocean-blue); box-shadow: 0px 6px 15px rgba(142, 202, 230, 0.4); }
 
         .item-card {
-            background: var(--white);
-            border-radius: 35px;
-            padding: 15px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            text-align: center;
-            border: 1px solid var(--sea-foam);
+            background: var(--white); border-radius: 35px; padding: 15px;
+            margin-bottom: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            text-align: center; border: 1px solid var(--sea-foam);
         }
 
-        .item-card img {
-            width: 100%;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            border-radius: 25px;
-            margin-bottom: 15px;
-        }
+        .item-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 25px; margin-bottom: 15px; }
 
-        /* --- Bubble Animation Element --- */
         .bubble {
-            position: absolute;
-            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1));
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 10000;
-            animation: bubblePop 0.8s ease-out forwards;
+            position: absolute; background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1));
+            border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 50%;
+            pointer-events: none; z-index: 10000; animation: bubblePop 0.8s ease-out forwards;
         }
 
-        #cart-count {
-            background: var(--coral);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
+        #cart-count { background: var(--coral); color: white; padding: 2px 10px; border-radius: 20px; font-size: 0.9rem; }
 
         .overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            z-index: 9999;
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: var(--deep-sea);
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px);
+            z-index: 9999; display: none; flex-direction: column;
+            justify-content: center; align-items: center; color: var(--deep-sea);
         }
 
-        .spinner {
-            width: 60px; height: 60px;
-            border: 6px solid var(--sea-foam);
-            border-top: 6px solid var(--deep-sea);
-            border-radius: 50%;
-            animation: spin 1s infinite linear;
-        }
-
+        .spinner { width: 60px; height: 60px; border: 6px solid var(--sea-foam); border-top: 6px solid var(--deep-sea); border-radius: 50%; animation: spin 1s infinite linear; }
         @keyframes spin { 100% { transform: rotate(360deg); } }
 
-        .upload-row {
-            background: rgba(255,255,255,0.5);
-            border: 2px dashed var(--sea-foam);
-            padding: 15px;
-            border-radius: 25px;
-            margin-bottom: 10px;
-            position: relative;
-        }
+        .upload-row { background: rgba(255,255,255,0.5); border: 2px dashed var(--sea-foam); padding: 15px; border-radius: 25px; margin-bottom: 10px; position: relative; }
     </style>
 </head>
 <body>
@@ -189,7 +121,6 @@
     <div id="overlay-text" style="margin-top:20px; font-weight:700;">Diving for treasures... ✨</div>
 </div>
 
-<!-- Home Page -->
 <div id="page-home" class="container active">
     <h1>MY SHOP</h1>
     <button class="btn-main" onclick="magicNavigate(event, 'page-shop')">🐚 ENTER THE OCEAN SHOP</button>
@@ -197,18 +128,14 @@
     <button class="btn-main btn-secondary" onclick="magicNavigate(event, 'page-admin-login')">👑 ROYAL ADMIN</button>
 </div>
 
-<!-- Shop Page -->
 <div id="page-shop" class="container">
     <h1>MY SHOP</h1>
     <div style="display:flex; flex-direction:column; gap:5px; margin-bottom:15px;">
         <select id="shop-category" onchange="loadProducts()">
             <option value="All">All Categories</option>
-            <option>Nail equipments</option>
-            <option>Lash equipments</option>
-            <option>Newborn apparel</option>
-            <option>Kids apparel</option>
-            <option>Woman apparel</option>
-            <option>Man apparel</option>
+            <option>Nail equipments</option><option>Lash equipments</option>
+            <option>Newborn apparel</option><option>Kids apparel</option>
+            <option>Woman apparel</option><option>Man apparel</option>
             <option>Footwear</option>
         </select>
         <div style="display:flex; gap:10px;">
@@ -221,7 +148,6 @@
     <button class="btn-main btn-secondary" onclick="magicNavigate(event, 'page-home')">🔙 BACK</button>
 </div>
 
-<!-- Cart Page -->
 <div id="page-cart" class="container">
     <h2>My Pearls 🛒</h2>
     <div id="cart-items"></div>
@@ -233,26 +159,22 @@
     <button class="btn-main btn-secondary" onclick="magicNavigate(event, 'page-shop')">🔙 KEEP DIVING</button>
 </div>
 
-<!-- Checkout Page -->
 <div id="page-checkout" class="container">
     <h2>Final Step 📦</h2>
     <input type="text" id="co-name" placeholder="Full Name">
     <input type="tel" id="co-phone" placeholder="Phone Number" maxlength="11">
     <input type="text" id="co-province" placeholder="Complete Address">
     <textarea id="co-note" placeholder="Special requests?"></textarea>
-    
     <div style="background:white; padding:15px; border-radius:30px; border:3px solid var(--sea-foam); text-align:center; margin-bottom:15px;">
         <b style="color:var(--deep-sea);">PAY DOWNPAYMENT</b><br>
         <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" style="width:130px; margin:10px 0;">
         <p style="font-weight:700; color:var(--coral); font-size:1.2rem;">₱<span id="checkout-downpayment-val">0</span></p>
     </div>
-
     <input type="text" id="co-ref" placeholder="GCash Reference Number">
     <button class="btn-main" onclick="handleOrderSubmit(event)">🚀 CONFIRM ORDER</button>
     <button class="btn-main btn-secondary" onclick="magicNavigate(event, 'page-cart')">🔙 BACK</button>
 </div>
 
-<!-- Tracker -->
 <div id="page-status" class="container">
     <h1>MY SHOP</h1>
     <input type="text" id="search-name" placeholder="Registered Name">
@@ -261,7 +183,6 @@
     <button class="btn-main btn-secondary" onclick="magicNavigate(event, 'page-home')">BACK</button>
 </div>
 
-<!-- Admin -->
 <div id="page-admin-login" class="container">
     <h2>Royal Vault</h2>
     <input type="password" id="admin-pass" placeholder="Secret Key">
@@ -274,13 +195,11 @@
     <button class="btn-main" onclick="toggleAdminView('upload')">➕ ADD ITEMS</button>
     <button class="btn-main" onclick="toggleAdminView('items'); loadInventory();">📦 INVENTORY</button>
     <button class="btn-main" onclick="toggleAdminView('orders'); loadOrders();">📋 ORDERS</button>
-
     <div id="admin-upload" style="display:none;">
         <div id="upload-rows-container"></div>
         <button class="btn-main" onclick="addUploadRow()" style="background:var(--sea-foam);">➕ ADD ROW</button>
         <button class="btn-main" onclick="uploadAllProducts(event)">🚀 UPLOAD ALL</button>
     </div>
-
     <div id="admin-inventory" style="display:none;"><div id="inventory-list"></div></div>
     <div id="admin-orders" style="display:none;"><div id="order-list"></div></div>
     <button class="btn-main btn-secondary" onclick="location.reload()">LOGOUT</button>
@@ -308,21 +227,16 @@
             b.className = 'bubble';
             const x = e.pageX || e.clientX + window.scrollX;
             const y = e.pageY || e.clientY + window.scrollY;
-            const offset = 40;
-            b.style.left = (x + (Math.random()-0.5)*offset) + 'px';
-            b.style.top = (y + (Math.random()-0.5)*offset) + 'px';
+            b.style.left = (x + (Math.random()-0.5)*40) + 'px';
+            b.style.top = (y + (Math.random()-0.5)*40) + 'px';
             const size = Math.random() * 15 + 10;
-            b.style.width = size + 'px';
-            b.style.height = size + 'px';
+            b.style.width = size + 'px'; b.style.height = size + 'px';
             document.body.appendChild(b);
             setTimeout(() => b.remove(), 800);
         }
     }
 
-    function magicNavigate(e, pageId) {
-        createBubbles(e);
-        showPage(pageId);
-    }
+    function magicNavigate(e, id) { createBubbles(e); showPage(id); }
 
     function showPage(id) {
         document.querySelectorAll('.container').forEach(c => c.classList.remove('active'));
@@ -333,23 +247,10 @@
     }
 
     function addUploadRow() {
-        const container = document.getElementById('upload-rows-container');
-        const row = document.createElement('div');
-        row.className = 'upload-row';
-        row.innerHTML = `
-            <select class="p-category">
-                <option>Nail equipments</option><option>Lash equipments</option>
-                <option>Newborn apparel</option><option>Kids apparel</option>
-                <option>Woman apparel</option><option>Man apparel</option>
-                <option>Footwear</option>
-            </select>
-            <input type="file" class="p-img" accept="image/*">
-            <input type="text" class="p-name" placeholder="Name">
-            <input type="number" class="p-price" placeholder="Price">
-            <input type="number" class="p-fee" placeholder="Fee">
-            <input type="text" class="p-id" placeholder="ID Code">
-        `;
-        container.appendChild(row);
+        const div = document.createElement('div');
+        div.className = 'upload-row';
+        div.innerHTML = `<select class="p-category"><option>Nail equipments</option><option>Lash equipments</option><option>Newborn apparel</option><option>Kids apparel</option><option>Woman apparel</option><option>Man apparel</option><option>Footwear</option></select><input type="file" class="p-img" accept="image/*"><input type="text" class="p-name" placeholder="Name"><input type="number" class="p-price" placeholder="Price"><input type="number" class="p-fee" placeholder="Fee"><input type="text" class="p-id" placeholder="ID Code">`;
+        document.getElementById('upload-rows-container').appendChild(div);
     }
 
     async function uploadAllProducts(e) {
@@ -359,22 +260,10 @@
         for(let row of rows) {
             const imgFile = row.querySelector('.p-img').files[0];
             if(!imgFile) continue;
-            const b64 = await new Promise(r => {
-                const rd = new FileReader();
-                rd.readAsDataURL(imgFile);
-                rd.onload = e => r(e.target.result);
-            });
-            await db.collection("products").add({
-                category: row.querySelector('.p-category').value,
-                name: row.querySelector('.p-name').value,
-                price: parseFloat(row.querySelector('.p-price').value),
-                fee: parseFloat(row.querySelector('.p-fee').value),
-                itemId: row.querySelector('.p-id').value,
-                img: b64, status: "enabled", timestamp: firebase.firestore.FieldValue.serverTimestamp()
-            });
+            const b64 = await new Promise(r => { const rd = new FileReader(); rd.readAsDataURL(imgFile); rd.onload = e => r(e.target.result); });
+            await db.collection("products").add({ category: row.querySelector('.p-category').value, name: row.querySelector('.p-name').value, price: parseFloat(row.querySelector('.p-price').value), fee: parseFloat(row.querySelector('.p-fee').value), itemId: row.querySelector('.p-id').value, img: b64, status: "enabled", timestamp: firebase.firestore.FieldValue.serverTimestamp() });
         }
-        hideOverlay();
-        location.reload();
+        hideOverlay(); location.reload();
     }
 
     async function loadProducts() {
@@ -387,25 +276,17 @@
             const d = doc.data();
             globalPhotos[d.itemId] = d.img;
             if((cat === "All" || d.category === cat) && d.name.toLowerCase().includes(search)) {
-                div.innerHTML += `
-                    <div class="item-card">
-                        <img src="${d.img}">
-                        <h3>${d.name}</h3>
-                        <p style="color:var(--coral); font-weight:700;">₱${d.price}</p>
-                        <input type="text" id="sz-${doc.id}" placeholder="Size">
-                        <input type="text" id="cl-${doc.id}" placeholder="Color">
-                        <button class="btn-main" onclick="addToCart(event, '${doc.id}', '${d.itemId}', ${d.price}, ${d.fee}, '${d.name.replace(/'/g, "\\'")}')">ADD TO BASKET</button>
-                    </div>`;
+                div.innerHTML += `<div class="item-card"><img src="${d.img}"><h3>${d.name}</h3><p style="color:var(--coral); font-weight:700;">₱${d.price}</p><input type="text" id="sz-${doc.id}" placeholder="Size"><input type="text" id="cl-${doc.id}" placeholder="Color"><button class="btn-main" onclick="addToCart(event, '${doc.id}', '${d.itemId}', ${d.price}, ${d.fee}, '${d.name.replace(/'/g, "\\'")}')">ADD TO BASKET</button></div>`;
             }
         });
     }
 
     function addToCart(e, docId, itemId, price, fee, name) {
         createBubbles(e);
-        const sz = document.getElementById(`sz-${docId}`).value;
-        const cl = document.getElementById(`cl-${docId}`).value;
+        const sz = document.getElementById(`sz-${docId}`).value, cl = document.getElementById(`cl-${docId}`).value;
         if(!sz || !cl) return alert("Specify options!");
-        cart.push({ itemId, name, sz, cl, qty: 1, price, fee });
+        // Store the image string directly in the cart object so it survives refresh
+        cart.push({ itemId, name, sz, cl, qty: 1, price, fee, img: globalPhotos[itemId] });
         localStorage.setItem('hatice_cart', JSON.stringify(cart));
         document.getElementById('cart-count').innerText = cart.length;
     }
@@ -413,13 +294,10 @@
     function updateCartUI() {
         const div = document.getElementById('cart-items');
         let tP = 0, tF = 0;
+        // Uses the img stored directly in the item object
         div.innerHTML = cart.length ? cart.map((i, idx) => {
             tP += i.price; tF += i.fee;
-            return `<div class="item-card" style="display:flex; align-items:center; padding:10px;">
-                <img src="${globalPhotos[i.itemId]}" style="width:50px; border-radius:10px;">
-                <div style="margin-left:15px; text-align:left;"><b>${i.name}</b><br><small>${i.sz} / ${i.cl}</small></div>
-                <button onclick="cart.splice(${idx},1); updateCartUI();" style="margin-left:auto; background:none; border:none; color:var(--coral); font-size:1.5rem;">✕</button>
-            </div>`;
+            return `<div class="item-card" style="display:flex; align-items:center; padding:10px;"><img src="${i.img}" style="width:50px; border-radius:10px;"><div style="margin-left:15px; text-align:left;"><b>${i.name}</b><br><small>${i.sz} / ${i.cl}</small></div><button onclick="cart.splice(${idx},1); updateCartUI();" style="margin-left:auto; background:none; border:none; color:var(--coral); font-size:1.5rem;">✕</button></div>`;
         }).join('') : "Empty shell... 🐚";
         document.getElementById('cart-total-items').innerText = tP;
         document.getElementById('cart-total-fees').innerText = tF;
@@ -430,41 +308,41 @@
 
     async function handleOrderSubmit(e) {
         createBubbles(e);
-        const ref = document.getElementById('co-ref').value;
-        if(!ref) return alert("Ref required!");
+        if(!document.getElementById('co-ref').value) return alert("Ref required!");
         showOverlay("Sending pearls... 🐚");
-        await db.collection("orders").add({
-            name: document.getElementById('co-name').value.toLowerCase(),
-            phone: document.getElementById('co-phone').value,
-            address: document.getElementById('co-province').value,
-            ref: ref, items: cart,
-            totalP: document.getElementById('cart-total-items').innerText,
-            status: "Pending", timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        await db.collection("orders").add({ name: document.getElementById('co-name').value.toLowerCase(), phone: document.getElementById('co-phone').value, address: document.getElementById('co-province').value, ref: document.getElementById('co-ref').value, items: cart, totalP: document.getElementById('cart-total-items').innerText, totalF: document.getElementById('cart-total-fees').innerText, status: "Pending", timestamp: firebase.firestore.FieldValue.serverTimestamp() });
+        localStorage.removeItem('hatice_cart'); location.reload();
+    }
+
+    async function trackOrder(e) {
+        createBubbles(e);
+        const name = document.getElementById('search-name').value.toLowerCase().trim();
+        if(!name) return;
+        showOverlay("Searching... 🐚");
+        const snap = await db.collection("orders").where("name", "==", name).get();
+        const res = document.getElementById('status-results'); res.innerHTML = "";
+        hideOverlay();
+        if(snap.empty) { res.innerHTML = "No orders found."; return; }
+        snap.forEach(doc => {
+            const o = doc.data();
+            // Uses the img stored directly in the order item object
+            const items = o.items.map(i => `<div style="display:flex;align-items:center;margin-bottom:5px;"><img src="${i.img}" style="width:40px;height:40px;border-radius:5px;margin-right:10px;"><span>${i.name} (x${i.qty})</span></div>`).join('');
+            res.innerHTML += `<div class="item-card"><div style="background:var(--sea-foam);padding:10px;border-radius:15px;margin-bottom:10px;font-weight:700;">STATUS: ${o.status}</div>${items}<p>Ref: ${o.ref}</p></div>`;
         });
-        localStorage.removeItem('hatice_cart');
-        location.reload();
     }
 
     function adminAuth(e) { 
         createBubbles(e); 
-        if(document.getElementById('admin-pass').value === "myshop120100") { 
-            showPage('page-admin-panel'); 
-            if(document.getElementById('upload-rows-container').children.length === 0) addUploadRow(); 
-        } else alert("Denied!"); 
+        if(document.getElementById('admin-pass').value === "myshop120100") { showPage('page-admin-panel'); if(!document.getElementById('upload-rows-container').children.length) addUploadRow(); } 
+        else alert("Denied!"); 
     }
 
     function showOverlay(t) { document.getElementById('overlay-text').innerText = t; document.getElementById('loading-overlay').style.display = 'flex'; }
     function hideOverlay() { document.getElementById('loading-overlay').style.display = 'none'; }
-    function toggleAdminView(v) { 
-        document.getElementById('admin-upload').style.display = v === 'upload' ? 'block' : 'none';
-        document.getElementById('admin-inventory').style.display = v === 'items' ? 'block' : 'none';
-        document.getElementById('admin-orders').style.display = v === 'orders' ? 'block' : 'none';
-    }
+    function toggleAdminView(v) { document.getElementById('admin-upload').style.display = v === 'upload' ? 'block' : 'none'; document.getElementById('admin-inventory').style.display = v === 'items' ? 'block' : 'none'; document.getElementById('admin-orders').style.display = v === 'orders' ? 'block' : 'none'; }
 
     document.addEventListener('click', (e) => { if(e.target.tagName === 'BUTTON') createBubbles(e); });
     document.addEventListener('DOMContentLoaded', () => { document.getElementById('cart-count').innerText = cart.length; });
 </script>
-
 </body>
-
 </html>
